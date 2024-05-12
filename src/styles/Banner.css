@@ -1,51 +1,43 @@
 .kasa-banner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr;
-    justify-content: space-between;
-    align-content: center;
-    background-color: pink;
-    margin: 2em;
-    padding: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr;
+  justify-content: space-between;
+  align-content: center;
+  margin: 2em;
 }
-
-.banner-text {
-    grid-column: 1 / 3;
-    height: 7em;
-    width: 70%;
-    margin: 1em auto;
-    background-color: rgba(0, 0, 0, 0.478);
-    color: white;
-    align-content: center;
-    border-radius: 10px;
+.kasa-banner .banner-text {
+  grid-column: 1/3;
+  width: 100%;
+  height: 7em;
+  margin: 1em auto;
+  background-color: rgba(0, 0, 0, 0.478);
+  color: white;
+  align-content: center;
+  border-radius: 10px;
 }
-
-.logo {
-    background-color: black;
-    width: 20%;
-    height: 5em;
-    margin: 0 auto;
-    display: block;
-    margin-left: 0.5em;
+.kasa-banner .banner-text .logo {
+  background-color: orange;
+  width: 20%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  margin-left: 0.5em;
 }
-
-.menu {
-    list-style-type: none;
+.kasa-banner .banner-text .menu {
+  list-style-type: none;
 }
 
 .flex {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
-
-.padding {
-    padding: 0 0.5em 0;
+.flex .padding {
+  padding: 0 0.5em 0;
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
 }
-
-a {
-    text-decoration: none;
-    color: black;
-}
-a:hover {
-    text-decoration: underline;
-}
+.flex .padding:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=Banner.css.map */

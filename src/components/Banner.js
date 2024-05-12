@@ -1,3 +1,7 @@
+/**
+ * @returns {HTMLElement} header with logo and menu
+ */
+
 import '../styles/Banner.css';
 
 function Banner() {
@@ -7,10 +11,10 @@ function Banner() {
             <img src={nothing} alt="logo" className='logo'/>
             <ul className='menu flex'>
                 <li>
-                    <a className='padding' href="#">Accueil</a>
+                    <a className='padding' href="index.html">Accueil</a>
                 </li>
                 <li>
-                    <a className='padding' href="#">A propos</a>
+                    <a className='padding' href="index.html">A propos</a>
                 </li>
             </ul>
             <div className='banner-text'>

@@ -1,4 +1,4 @@
-const annonces =[
+export const Annonces =[
 	{
 		"id": "c67ab8a7",
 		"title": "Appartement cosy",
@@ -617,3 +617,4 @@ const annonces =[
 		]
 	}
 ]
+
