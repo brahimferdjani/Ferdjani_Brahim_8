@@ -9,7 +9,7 @@ function Banner() {
     return (
         <header className='kasa-banner'>
             <img src={nothing} alt="logo" className='logo'/>
-            <ul className='menu flex'>
+            <ul className='flex'>
                 <li>
                     <a className='padding' href="index.html">Accueil</a>
                 </li>
