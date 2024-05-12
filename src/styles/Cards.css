@@ -17,10 +17,10 @@
   flex-direction: column;
   background-color: black;
   border-radius: 10px;
+  padding: 0.5em;
+  justify-content: flex-end;
 }
 .cards .contents .elements {
-  padding-top: 15em;
-  padding-left: 2em;
   text-align: left;
 }
 .cards h1 {
