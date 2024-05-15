@@ -20,6 +20,9 @@
   padding: 0.5em;
   justify-content: flex-end;
 }
+.cards .contents img {
+  width: 100%;
+}
 .cards .contents .elements {
   text-align: left;
 }

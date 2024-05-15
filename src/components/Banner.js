@@ -3,6 +3,7 @@
  */
 
 import '../styles/Banner.css';
+import Cards from '../components/Cards';
 
 function Banner() {
     const nothing = null;
@@ -20,6 +21,7 @@ function Banner() {
             <div className='banner-text'>
                 <p>Chez vous, partout et ailleurs</p>
             </div>
+            <Cards/>
         </header>
     );
 }

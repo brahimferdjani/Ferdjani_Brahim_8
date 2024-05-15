@@ -1,13 +1,11 @@
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
 import Banner from './components/Banner';
-import Cards from './components/Cards';
 
 function App() {
   return (
-    <div className="App">
-      <Banner />
-      <Cards />
-    </div>
+    <Routes>
+      <Route path="/" element={<Banner />} />
+    </Routes>
   );
 }
 
