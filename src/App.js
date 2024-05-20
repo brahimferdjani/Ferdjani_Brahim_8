@@ -1,10 +1,11 @@
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Banner from './components/Banner';
+import Home from './pages/Home/Home';
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Banner />} />
+      <Route path="/" element={<Home  />} />
     </Routes>
   );
 }

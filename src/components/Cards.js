@@ -1,24 +1,14 @@
-import '../styles/Cards.css';
-import { annonces } from '../Datas/Annonces';
-function Cards() {
+import React from 'react';
+function Cards(props) {
 
-    const cards = []
-    for(let i = 0; i <= 5; i++) {
-    cards.push (
-        <div className='contents' key={annonces[i].id}>
-            <img src={annonces[i].pictures} alt=""/>
-            <div className='elements'>
-                <h1>{annonces[i].title}</h1>
-            </div>
-        </div>
+    return (
+        <li key={props.title}>
+            <a href={props.tags}>
+                <img src={props.src} alt={props.alt} />
+                <p>{props.title}</p>
+            </a>
+        </li>
     )
 }
 
-    return (
-        <div className="cards">
-        {cards}
-        </div>
-    );
-}
-
-export default Cards;
+export default Cards

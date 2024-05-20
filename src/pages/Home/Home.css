@@ -1,0 +1,120 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 1240px;
+  margin: 20px auto;
+  height: 68px;
+}
+header img {
+  width: 210.32px;
+  height: 68px;
+}
+header ul {
+  display: flex;
+}
+header ul li {
+  list-style-type: none;
+  padding: 0 10px;
+}
+header ul li a {
+  text-decoration: none;
+  color: black;
+}
+header ul li a:hover {
+  text-decoration: underline;
+}
+
+.banner {
+  width: 1240px;
+  height: 223px;
+  margin: 10px auto;
+  background-color: rgba(0, 0, 0, 0.545);
+  box-sizing: content-box;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.banner img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.banner div {
+  background-color: rgba(0, 0, 0, 0.525);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.banner div p {
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding-top: 80px;
+  font-family: Montserrat, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+main {
+  width: 1240px;
+  height: 829px;
+  margin: 20px auto;
+  background-color: #F6F6F6;
+  padding: 10px;
+  border-radius: 20px;
+}
+main ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 20px;
+  padding: 20px 20px;
+  height: 100%;
+}
+main ul li {
+  list-style: none;
+  position: relative;
+}
+main ul li a {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  color: black;
+}
+main ul li a img {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 100%;
+}
+main ul li a p {
+  position: absolute;
+  text-align: left;
+  margin: 0.5em;
+  bottom: 5%;
+  left: 3%;
+  padding: 0.4em;
+  background-color: white;
+}
+
+footer {
+  background-color: black;
+  height: 209px;
+  margin-top: 3em;
+}
+footer div {
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer div img {
+  width: 122px;
+  height: 39.44px;
+}
+footer div p {
+  color: white;
+}/*# sourceMappingURL=Home.css.map */
