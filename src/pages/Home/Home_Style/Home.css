@@ -84,11 +84,13 @@ main ul li a {
   text-decoration: none;
   position: absolute;
   color: black;
+  padding: 0 20px;
 }
 main ul li a img {
   object-fit: cover;
   border-radius: 10px;
-  width: 100%;
+  width: 340px;
+  height: 340px;
 }
 main ul li a p {
   position: absolute;

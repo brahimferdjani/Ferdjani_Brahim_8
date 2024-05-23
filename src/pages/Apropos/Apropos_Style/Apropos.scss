@@ -1,0 +1,51 @@
+main {
+    background-color: transparent;
+    height: auto;
+
+
+    section {
+
+        margin: 10px 0;
+
+        div {
+            background-color: #FF6060;
+
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px 50px;
+                color: black;
+                text-decoration: none;
+
+                h2 {}
+
+                .fa-chevron-up {
+                    display: none;
+                }
+
+                .hidden {
+                    display: none;
+                }
+
+                .active {
+                    display: block;
+                }
+            }
+        }
+
+        .paragraphe {
+            background-color: #F6F6F673;
+            padding: 5px 50px;
+            display: none;
+
+            p {}
+
+        }
+
+        .active {
+            display: block;
+        }
+    }
+
+}

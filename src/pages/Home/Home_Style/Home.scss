@@ -76,7 +76,7 @@ main {
     background-color: #F6F6F6;
     padding: 10px;
     border-radius: 20px;
-
+    
     ul {
 
         display: grid;
@@ -98,11 +98,13 @@ main {
                 text-decoration: none;
                 position: absolute;
                 color: black;
+                padding: 0 20px;
 
                 img {
                     object-fit:cover;
                     border-radius: 10px;
-                    width: 100%;
+                    width: 340px;
+                    height: 340px;
                 }
 
                 p {

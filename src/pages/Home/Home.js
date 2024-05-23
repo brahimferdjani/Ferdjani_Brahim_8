@@ -2,10 +2,10 @@ import React from 'react';
 import Banner from '../../components/Banner.js';
 import Cards from '../../components/Cards.js';
 import { annonces } from '../../Annonces.js';
-import logo from '../Home/LOGO.png';
-import logofooter from './LOGOFooter.png';
-import cover from '../Home/Image source 1.png'
-import './Home.css';
+import logo from '../../assets/img/LOGO.png';
+import logofooter from '../../assets/img/LOGOFooter.png';
+import cover from '../../assets/img/Image source 1.png'
+import './Home_Style/Home.css';
 
 function Home(props) {
 
