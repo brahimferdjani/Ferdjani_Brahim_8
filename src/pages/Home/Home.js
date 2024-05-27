@@ -12,10 +12,6 @@ function Home(props) {
 
     const nombreCarte = annonces.map(annonce => <Cards key={annonce.id} tags={annonce.tags} src={annonce.cover} alt={annonce.title} title={annonce.title} />)
 
-    if (nombreCarte.length > 6) {
-        nombreCarte.length = 6
-    }
-
     const year = new Date().getFullYear();
 
 
