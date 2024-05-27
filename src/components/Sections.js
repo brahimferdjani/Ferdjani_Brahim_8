@@ -1,39 +1,36 @@
 import React from "react"
-
+import { useState } from "react";
 
 function Sections(props) {
-    const handleClick = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const paragraphe = document.querySelector(".paragraphe")
-        paragraphe.classList.toggle("active");
-        toggleArrow()
-    }
 
-    const toggleArrow = () => {
-        const arrow = document.querySelector(".fa-chevron-down")
-        arrow.classList.toggle("hidden")
-        const arrow2 = document.querySelector(".fa-chevron-up")
-        arrow2.classList.toggle("active")
-    }
+    const [isOpen, setIsOpen] = useState(false)
 
-    return (
-        <section id={props.id}>
-            <div onClick={handleClick}>
-                <a href="Apropos">
+    return !isOpen ? (
+        <section>
+            <div onClick={() => setIsOpen(true)}>
+                <button>
                     <h2>{props.title}</h2>
                     <div className="arrow">
                         <i class="fa-solid fa-chevron-down"></i>
-                        <i class="fa-solid fa-chevron-up"></i>
                     </div>
-                </a>
+                </button>
             </div>
+        </section>
+    ) : (<section>
+        <div onClick={() => setIsOpen(false)}>
+            <button>
+                <h2>{props.title}</h2>
+                <div className="arrow">
+                    <i class="fa-solid fa-chevron-up"></i>
+                </div>
+            </button>
             <div className="paragraphe">
                 <p>
                     {props.text}
                 </p>
             </div>
-        </section>
+        </div>
+    </section >
     )
 }
 

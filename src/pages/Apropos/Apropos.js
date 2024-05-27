@@ -3,15 +3,12 @@ import Banner from "../../components/Banner";
 import logo from "../../assets/img/LOGO.png";
 import cover from "../../assets/img/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png";
 import logofooter from "../../assets/img/LOGOFooter.png";
-import './Apropos_Style/Apropos.css';
+import './Apropos_Style/Apropos.scss';
 import Sections from "../../components/Sections";
+import { Navbar } from "../../components/Navabar";
 
 function Apropos() {
-    const head = document.querySelector("head");
-    const script = document.createElement("script");
-    script.src = "https://kit.fontawesome.com/53eb4fa86e.js";
-    script.crossOrigin = "anonymous";
-    head.appendChild(script);
+   
     const year = new Date().getFullYear();
 
 
@@ -19,12 +16,7 @@ function Apropos() {
         <>
             <header>
                 <img src={logo} alt='logo' />
-                <nav>
-                    <ul>
-                        <li><a href='./pages/Home'>Accueil</a></li>
-                        <li><a href='./pages/A_propos'>A Propos</a></li>
-                    </ul>
-                </nav>
+                <Navbar />
             </header>
             <Banner text={null} className='banner' src={cover} alt='paysage' />
             <main>

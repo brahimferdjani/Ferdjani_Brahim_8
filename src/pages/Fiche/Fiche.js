@@ -1,14 +1,11 @@
 import React from "react";
-import Banner from "../../components/Banner";
 import logo from "../../assets/img/LOGO.png";
-import cover from "../../assets/img/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png";
 import logofooter from "../../assets/img/LOGOFooter.png";
-import './Apropos_Style/Apropos.css';
 import { annonces } from '../../Annonces.js';
 
 
 function Fiche(props) {
-    const head = document.querySelector("head");
+    const head = document.querySelector("head"); // no use of query
     const script = document.createElement("script");
     script.src = "https://kit.fontawesome.com/53eb4fa86e.js";
     script.crossOrigin = "anonymous";

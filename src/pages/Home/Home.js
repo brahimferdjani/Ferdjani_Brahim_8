@@ -5,7 +5,8 @@ import { annonces } from '../../Annonces.js';
 import logo from '../../assets/img/LOGO.png';
 import logofooter from '../../assets/img/LOGOFooter.png';
 import cover from '../../assets/img/Image source 1.png'
-import './Home_Style/Home.css';
+import './Home.scss';
+import { Navbar } from '../../components/Navabar.js';
 
 function Home(props) {
 
@@ -18,16 +19,12 @@ function Home(props) {
     const year = new Date().getFullYear();
 
 
+    // composant header et footer
     return (
         <>
             <header>
                 <img src={logo} alt='logo'/>
-                <nav>
-                    <ul>
-                        <li><a href='./pages/Home'>Accueil</a></li>
-                        <li><a href='./pages/A_propos'>A Propos</a></li>
-                    </ul>
-                </nav>
+                <Navbar />
             </header>
             <Banner text='Chez vous, partout et ailleurs' className='banner' src={cover} alt='paysage' />
             <main>
@@ -40,7 +37,7 @@ function Home(props) {
                 <img src={logofooter} alt='logo' />
                 <p>© {year} Kasa. All rights reserved</p>
                 </div>
-            </footer>
+            </footer> 
         </>
     );
 }
