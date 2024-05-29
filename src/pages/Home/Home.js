@@ -18,17 +18,17 @@ function Home(props) {
     // composant header et footer
     return (
         <>
-            <header>
+            <header className='header_home'>
                 <img src={logo} alt='logo'/>
                 <Navbar />
             </header>
             <Banner text='Chez vous, partout et ailleurs' className='banner' src={cover} alt='paysage' />
-            <main>
+            <main className='main_home'>
                 <ul>
                     {nombreCarte}
                 </ul>
             </main>
-            <footer>
+            <footer className='footer_home'>
                 <div>
                 <img src={logofooter} alt='logo' />
                 <p>© {year} Kasa. All rights reserved</p>

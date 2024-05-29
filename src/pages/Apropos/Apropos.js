@@ -14,18 +14,18 @@ function Apropos() {
 
     return (
         <>
-            <header>
+            <header className="header_home">
                 <img src={logo} alt='logo' />
                 <Navbar />
             </header>
             <Banner text={null} className='banner' src={cover} alt='paysage' />
-            <main>
+            <main className="main_apropos">
                <Sections title="Fiabilisation" text="Les annonces postées sur Kasa garantissent une fiabilisation de 99%." id="fiabilite" />
                <Sections title="Respect" text="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement suspect sera supprimé." id="respect" />
                <Sections title="Service" text="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question." id="service" />
                <Sections title="Sécurité" text="La sécurité est la priorité de Kasa. Aussi bien pour nos équipes que pour nos clients. N'hésitez pas à nos DM !" id="securite" />
             </main>
-            <footer>
+            <footer className="footer_home">
                 <div>
                 <img src={logofooter} alt='logo' />
                 <p>© {year} Kasa. All rights reserved</p>
