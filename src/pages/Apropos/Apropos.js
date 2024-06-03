@@ -11,7 +11,6 @@ function Apropos() {
    
     const year = new Date().getFullYear();
 
-
     return (
         <>
             <header className="header_home">

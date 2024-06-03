@@ -1,7 +1,7 @@
 import React from "react"
 import { useState } from "react";
 
-function Sections(props) {
+function Sections({text, title}) {
 
     const [isOpen, setIsOpen] = useState(false)
 
@@ -9,7 +9,7 @@ function Sections(props) {
         <section>
             <div onClick={() => setIsOpen(true)}>
                 <button>
-                    <h2>{props.title}</h2>
+                    <h2>{title}</h2>
                     <div className="arrow">
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
@@ -19,14 +19,14 @@ function Sections(props) {
     ) : (<section>
         <div onClick={() => setIsOpen(false)}>
             <button>
-                <h2>{props.title}</h2>
+                <h2>{title}</h2>
                 <div className="arrow">
                     <i class="fa-solid fa-chevron-up"></i>
                 </div>
             </button>
             <div className="paragraphe">
                 <p>
-                    {props.text}
+                    {text}
                 </p>
             </div>
         </div>
