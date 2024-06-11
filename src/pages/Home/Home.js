@@ -9,7 +9,7 @@ import "./Home.scss";
 import Header from "../../components/Header.js";
 import Footer from "../../components/Footer.js";
 
-function Home(props) {
+function Home() {
   const nombreCarte = annonces.map((annonce) => (
     <Cards
       key={annonce.id}
@@ -17,10 +17,10 @@ function Home(props) {
       src={annonce.cover}
       alt={annonce.title}
       title={annonce.title}
+      id={annonce.id}
     />
   ));
 
-  // composant header / footer
   return (
     <>
       <Header className="header_home" logo={logo} alt="logo" />

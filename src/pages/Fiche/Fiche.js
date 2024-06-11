@@ -1,49 +1,63 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../../assets/img/LOGO.png";
 import logofooter from "../../assets/img/LOGOFooter.png";
-import { annonces } from '../../Annonces.js';
 import Sections from "../../components/Sections.js";
-import { Navbar } from "../../components/Navabar.js";
+import "./Fiche_Style/Fiche.scss";
+import Header from "../../components/Header.js";
+import Footer from "../../components/Footer.js";
+import { annonces } from "../../Annonces.js";
+import { useParams } from "react-router-dom";
 
-function Fiche(props) {
+function Fiche() {
+  useEffect(() => {
+    document.title = `Kasa | ${annonces.id}`;
+  }, []);
+  const { id } = useParams();
 
-    const year = new Date().getFullYear();
-
-    return (
-        <>
-            <header>
-                <img src={logo} alt='logo' />
-                <Navbar />
-            </header>
-            <main>
-                <section>
-                    <img src={annonces.pictures[0]} alt={annonces.title} />
-                </section>
-                <section>
-                    <h2>{annonces.title}</h2>
-                    <p>{annonces.location}</p>
-                    <ul>
-                        {annonces.tags.map(tag => <li key={tag}>{tag}</li>)}
-                    </ul>
-                    <Sections title="Description" text={annonces.description} id="description" />
-                </section>
-                <section>
-                    <div>
-                        <p>{annonces.host.name}</p>
-                        <img src={annonces.host.picture} alt={annonces.host.name} />
-                    </div>
-                    <p><span>{annonces.rating}</span></p>
-                    <Sections title="Équipements" text={annonces.equipments} id="equipements" />
-                </section>
-            </main>
-            <footer>
-                <div>
-                    <img src={logofooter} alt='logo' />
-                    <p>© {year} Kasa. All rights reserved</p>
-                </div>
-            </footer>
-        </>
-    )
+  const fiche = annonces
+    .filter((fiche) => fiche.id === id)
+    .map((fiche) => (
+      <>
+        <section>
+          <img src={fiche.pictures[0]} alt={fiche.title} />
+        </section>
+        <section>
+          <h2>{fiche.title}</h2>
+          <p>{fiche.location}</p>
+          <ul>
+            {fiche.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+          <Sections
+            title="Description"
+            text={fiche.description}
+            id="description"
+          />
+        </section>
+        <section>
+          <div>
+            <p>{fiche.host.name}</p>
+            <img src={fiche.host.picture} alt={fiche.host.name} />
+          </div>
+          <p>
+            <span>{fiche.rating}</span>
+          </p>
+          <Sections
+            title="Équipements"
+            text={fiche.equipments}
+            id="equipements"
+          />
+        </section>
+      </>
+    ));
+  return (
+    <>
+      <Header className="header_fiche" logo={logo} alt="logo" />
+      <main>{fiche}</main>
+      <Footer className="footer_fiche" logo={logofooter} alt="logo" />
+    </>
+  );
 }
 
-export default Fiche
+export default Fiche;
