@@ -4,10 +4,14 @@ import Sections from "./Sections";
 function FicheEquipement(props) {
   return (
     <>
-      <section>
-        <div>
+      <section className="equipement">
+        <div className="host_style">
           <p>{props.host.name}</p>
-          <img src={props.host.picture} alt={props.host.name} />
+          <img
+            className="host_picture"
+            src={props.host.picture}
+            alt={props.host.name}
+          />
         </div>
         <p>
           <span>{props.rating}</span>

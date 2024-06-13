@@ -8,6 +8,7 @@ import { annonces } from "../../Annonces.js";
 import { useParams } from "react-router-dom";
 import FicheDescription from "../../components/FicheDescription.js";
 import FicheEquipement from "../../components/FicheEquipement.js";
+import FicheCarroussel from "../../components/FicheCarroussel.js";
 
 function Fiche() {
   const { id } = useParams();
@@ -16,13 +17,18 @@ function Fiche() {
     .filter((fiche) => fiche.id === id)
     .map((fiche) => (
       <>
-        <section className="fiche_carroussel">
-          <img src={fiche.pictures[0]} alt={fiche.title} />
-        </section>
-        <FicheDescription {...fiche} />
-        <FicheEquipement {...fiche} />
+        <FicheCarroussel
+          className="fiche_carroussel"
+          src={fiche.pictures[0]}
+          alt={fiche.title}
+        />
+        <div className="fiche_info">
+          <FicheDescription {...fiche} />
+          <FicheEquipement {...fiche} />
+        </div>
       </>
     ));
+
   return (
     <>
       <Header className="header_home" logo={logo} alt="logo" />

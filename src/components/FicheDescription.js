@@ -4,7 +4,7 @@ import Sections from "./Sections";
 function FicheDescription(props) {
   return (
     <>
-      <section>
+      <section className="description">
         <h2>{props.title}</h2>
         <p>{props.location}</p>
         <ul>
