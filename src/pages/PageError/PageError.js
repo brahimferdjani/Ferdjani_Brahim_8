@@ -6,7 +6,7 @@ import logofooter from "../../assets/img/LOGOFooter.png";
 import "./Error.scss";
 import { Link } from "react-router-dom";
 
-function Error() {
+function PageError() {
   return (
     <>
       <Header className="header_home" logo={logo} alt="logo" />
@@ -20,4 +20,4 @@ function Error() {
   );
 }
 
-export default Error;
+export default PageError;

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function Sections({ text, title, className }) {
+function CollapseEquipements({ text, title, className }) {
   const [isOpen, setIsClosed] = useState(false);
 
   return !isOpen ? (
@@ -25,11 +25,13 @@ function Sections({ text, title, className }) {
           </div>
         </button>
         <div className="paragraphe">
-          <p>{text}</p>
+          {text.map((text) => (
+            <p>{text}</p>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-export default Sections;
+export default CollapseEquipements;
