@@ -7,6 +7,7 @@ function FicheName(props) {
   return (
     <>
       <section className={props.className}>
+        <Ratings rating={props.rating} />
         <div className="host_style">
           <p>{props.host.name}</p>
           <img
@@ -15,7 +16,6 @@ function FicheName(props) {
             alt={props.host.name}
           />
         </div>
-        <Ratings rating={props.rating} />
       </section>
     </>
   );

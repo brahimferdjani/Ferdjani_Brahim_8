@@ -5,16 +5,18 @@ function FicheCarroussel({ className, src, alt }) {
   const [index, setIndex] = useState(0);
 
   function handleClick() {
-    setIndex(index + 1);
     if (index === src.length - 1) {
       setIndex(0);
+    } else {
+      setIndex(index + 1);
     }
   }
 
   function handleClickLeft() {
-    setIndex(index - 1);
     if (index === 0) {
       setIndex(src.length - 1);
+    } else {
+      setIndex(index - 1);
     }
   }
   if (src.length > 1) {
