@@ -50,6 +50,11 @@
         padding: 5px 45px;
         border-radius: 10px 10px 5px 5px;
         background: var(--Gray, rgba(246, 246, 246, 0.45));
+
+        @media screen and (min-width: 375px) and (max-width: 1300px) {
+          font-size: 13px;
+          width: 335px;
+        }
       }
     }
   }
