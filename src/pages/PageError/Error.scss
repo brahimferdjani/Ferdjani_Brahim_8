@@ -5,7 +5,7 @@
   align-items: center;
   margin: 0 auto;
 
-  @media screen and (min-width: 375px) and (max-width: 768px) {
+  @media screen and (min-width: 375px) and (max-width: 1300px) {
     width: 375px;
   }
 
@@ -17,7 +17,7 @@
     font-weight: 700;
     margin: 139px auto;
 
-    @media screen and (min-width: 375px) and (max-width: 768px) {
+    @media screen and (min-width: 375px) and (max-width: 1300px) {
       font-size: 96px;
       margin: 113px auto;
     }
@@ -30,7 +30,7 @@
     font-weight: 500;
     margin: 0 auto;
 
-    @media screen and (min-width: 375px) and (max-width: 768px) {
+    @media screen and (min-width: 375px) and (max-width: 1300px) {
       font-size: 18px;
       width: 250px;
       text-align: center;
@@ -45,7 +45,7 @@
     text-decoration-line: underline;
     margin: 139px auto;
 
-    @media screen and (min-width: 375px) and (max-width: 768px) {
+    @media screen and (min-width: 375px) and (max-width: 1300px) {
       font-size: 14px;
       margin: 113px auto;
     }
