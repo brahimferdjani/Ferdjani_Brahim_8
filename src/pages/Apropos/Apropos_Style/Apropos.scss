@@ -4,20 +4,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 30px;
 
   @media screen and (min-width: 375px) and (max-width: 1300px) {
     width: 375px;
   }
 
   section {
-    margin: 30px 0;
+    margin: 0;
 
     @media screen and (min-width: 375px) and (max-width: 1300px) {
       margin: 15px auto;
     }
 
     div {
-      .apropos_button {
+      .button {
         background-color: #ff6060;
         display: flex;
         flex-wrap: wrap;
@@ -27,9 +28,11 @@
         cursor: pointer;
         justify-content: space-between;
         align-items: center;
-        padding: 15px 20px 10px 10px;
+        padding: 10px 20px 10px 15px;
         text-decoration: none;
         color: white;
+        position: relative;
+        z-index: 1;
 
         @media screen and (min-width: 375px) and (max-width: 1300px) {
           width: 335px;
@@ -37,24 +40,51 @@
 
         h2 {
           margin: 0;
+          color: #fff;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
 
           @media screen and (min-width: 375px) and (max-width: 1300px) {
             font-size: 13px;
           }
         }
+
+        .arrow {
+          background-color: transparent;
+          border: 0px;
+          @media screen and (min-width: 375px) and (max-width: 1300px) {
+            width: 15px;
+            height: 15px;
+          }
+        }
       }
     }
 
-    div {
-      .paragraphe {
-        padding: 5px 45px;
-        border-radius: 10px 10px 5px 5px;
-        background: var(--Gray, rgba(246, 246, 246, 0.45));
+    .collapse {
+      transform: "translateY(0)";
+      transition: "all 0.5s";
+    }
 
-        @media screen and (min-width: 375px) and (max-width: 1300px) {
-          font-size: 13px;
-          width: 335px;
-        }
+    p {
+      margin: 0;
+      text-align: left;
+      font-size: 18px;
+      border-radius: 10px 10px 5px 5px;
+      font-weight: 400;
+      padding: 20px 28px 20px 20px;
+      background: var(--Gray, rgba(246, 246, 246, 0.45));
+      width: 1023px;
+      z-index: 0;
+
+      @media screen and (min-width: 375px) and (max-width: 1300px) {
+        font-size: 13px;
+        padding: 15px 15px 15px 15px;
+      }
+
+      @media screen and (min-width: 375px) and (max-width: 1300px) {
+        font-size: 13px;
+        width: 335px;
       }
     }
   }

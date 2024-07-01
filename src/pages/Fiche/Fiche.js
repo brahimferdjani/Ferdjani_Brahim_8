@@ -8,7 +8,6 @@ import { annonces } from "../../Annonces.js";
 import { useParams } from "react-router-dom";
 import FicheCarroussel from "../../components/FicheCarroussel.js";
 import Sections from "../../components/Sections.js";
-import CollapseEquipements from "../../components/CollapseEquipements.js";
 import FicheTitle from "../../components/FicheTitle.js";
 import FicheName from "../../components/FicheName.js";
 import PageError from "../PageError/PageError.js";
@@ -34,16 +33,22 @@ function Fiche() {
         <div className="fiche_sections">
           <Sections
             title="Description"
-            text={fiche.description}
             id="description"
             className="fiche_collapse"
-          />
-          <CollapseEquipements
-            title="Équipements"
-            text={fiche.equipments}
-            id="equipments"
+          >
+            <p>{fiche.description}</p>
+          </Sections>
+          <Sections
+            title="Equipements"
+            id="equipements"
             className="fiche_collapse"
-          />
+          >
+            <p>
+              {fiche.equipments.map((equipement) => (
+                <li>{equipement}</li>
+              ))}
+            </p>
+          </Sections>
         </div>
       </main>
       <Footer className="footer_home" logo={logofooter} alt="logo" />

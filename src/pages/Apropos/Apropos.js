@@ -14,30 +14,49 @@ function Apropos() {
       <Header className="header_home" logo={logo} alt="logo" />
       <Banner text={null} className="banner" src={cover} alt="paysage" />
       <main className="main_apropos">
-        <Sections
-          title="Fiabilisation"
-          text="Les annonces postées sur Kasa garantissent une fiabilisation de 99%."
-          id="fiabilite"
-          className="apropos_button"
-        />
-        <Sections
-          title="Respect"
-          text="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement suspect sera supprimé."
-          id="respect"
-          className="apropos_button"
-        />
-        <Sections
-          title="Service"
-          text="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."
-          id="service"
-          className="apropos_button"
-        />
-        <Sections
-          title="Sécurité"
-          text="La sécurité est la priorité de Kasa. Aussi bien pour nos équipes que pour nos clients. N'hésitez pas à nos DM !"
-          id="securite"
-          className="apropos_button"
-        />
+        <Sections title="Fiabilité" id="fiabilite" className="button">
+          <p
+            style={{
+              transform: "translateY(0)",
+              transition: "all 0.5s",
+            }}
+          >
+            Kasa garantit votre fiabilité. Toutefois, pour une durée de 9
+            semaines ou plus, une maintenance proactive peut être envisagée.{" "}
+          </p>
+        </Sections>
+        <Sections title="Respect" id="respect" className="button">
+          <p
+            style={{
+              transform: "translateY(0)",
+              transition: "all 0.5s",
+            }}
+          >
+            La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
+            comportement suspect sera supprimé.
+          </p>
+        </Sections>
+        <Sections title="Service" id="service" className="button">
+          <p
+            style={{
+              transform: "translateY(0)",
+              transition: "all 0.5s",
+            }}
+          >
+            Chez Kasa, partout où vous est.
+          </p>
+        </Sections>
+        <Sections title="Sécurité" id="securite" className="button">
+          <p
+            style={{
+              transform: "translateY(0)",
+              transition: "all 0.5s",
+            }}
+          >
+            La sécurité est la priorité de Kasa. Aussi bien pour nos équipes que
+            pour nos clients. N'hésitez pas à nos DM !
+          </p>
+        </Sections>
       </main>
       <Footer className="footer_home" logo={logofooter} alt="logo" />
     </>
