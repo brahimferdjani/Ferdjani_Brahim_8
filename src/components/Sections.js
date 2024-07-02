@@ -9,7 +9,7 @@ function Sections({ text, title, className, children }) {
       <div onClick={() => setIsClosed(true)}>
         <button className={className}>
           <h2>{title}</h2>
-          <button className="arrow">
+          <button className="rotate_arrow">
             <svg
               style={{ transform: "rotate(0)", transition: "all 0.5s" }}
               width="33"
@@ -31,8 +31,8 @@ function Sections({ text, title, className, children }) {
       </div>
       <p
         style={{
-          display: "none",
-          transform: "translateY(100%)",
+          height: isOpen ? "auto" : "0px",
+          position: "relative",
           transition: "all 0.5s",
         }}
       >
@@ -44,7 +44,7 @@ function Sections({ text, title, className, children }) {
       <div onClick={() => setIsClosed(false)}>
         <button className={className}>
           <h2>{title}</h2>
-          <button className="arrow ">
+          <button className="rotate_arrow">
             <svg
               style={{ transform: "rotate(-180deg)", transition: "all 0.5s" }}
               width="33"

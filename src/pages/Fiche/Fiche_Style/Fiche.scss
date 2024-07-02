@@ -97,6 +97,7 @@ main {
           margin: 5px 0;
         }
       }
+
       p {
         margin: 0;
         color: #000;
@@ -244,12 +245,39 @@ main {
           font-size: 13px;
         }
       }
+
+      .rotate_arrow {
+        background-color: transparent;
+        border: 0px;
+        @media screen and (min-width: 375px) and (max-width: 1300px) {
+          width: 15px;
+          height: 15px;
+        }
+      }
     }
 
-    .paragraphe p {
+    p {
       margin: 10px auto;
+      text-align: justify;
+      width: 582px;
+      padding: 20px 28px;
+      font-size: 18px;
       @media screen and (min-width: 375px) and (max-width: 1300px) {
         font-size: 13px;
+      }
+    }
+
+    ul {
+      padding: 20px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      li {
+        list-style: none;
+        font-size: 18px;
+        @media screen and (min-width: 375px) and (max-width: 1300px) {
+          font-size: 13px;
+        }
       }
     }
   }

@@ -43,11 +43,11 @@ function Fiche() {
             id="equipements"
             className="fiche_collapse"
           >
-            <p>
+            <ul>
               {fiche.equipments.map((equipement) => (
                 <li>{equipement}</li>
               ))}
-            </p>
+            </ul>
           </Sections>
         </div>
       </main>

@@ -17,7 +17,9 @@ function Apropos() {
         <Sections title="Fiabilité" id="fiabilite" className="button">
           <p
             style={{
-              transform: "translateY(0)",
+              height: "auto",
+              position: "relative",
+              padding: "20px 28px 20px 20px",
               transition: "all 0.5s",
             }}
           >
@@ -28,7 +30,9 @@ function Apropos() {
         <Sections title="Respect" id="respect" className="button">
           <p
             style={{
-              transform: "translateY(0)",
+              height: "auto",
+              position: "relative",
+              padding: "20px 28px 20px 20px",
               transition: "all 0.5s",
             }}
           >
@@ -39,7 +43,9 @@ function Apropos() {
         <Sections title="Service" id="service" className="button">
           <p
             style={{
-              transform: "translateY(0)",
+              height: "auto",
+              position: "relative",
+              padding: "20px 28px 20px 20px",
               transition: "all 0.5s",
             }}
           >
@@ -49,7 +55,9 @@ function Apropos() {
         <Sections title="Sécurité" id="securite" className="button">
           <p
             style={{
-              transform: "translateY(0)",
+              height: "auto",
+              position: "relative",
+              padding: "20px 28px 20px 20px",
               transition: "all 0.5s",
             }}
           >
