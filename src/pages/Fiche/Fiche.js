@@ -7,7 +7,7 @@ import Footer from "../../components/Footer.js";
 import { annonces } from "../../Annonces.js";
 import { useParams } from "react-router-dom";
 import FicheCarroussel from "../../components/FicheCarroussel.js";
-import Sections from "../../components/Sections.js";
+import Accordion from "../../components/Accordion.js";
 import FicheTitle from "../../components/FicheTitle.js";
 import FicheName from "../../components/FicheName.js";
 import PageError from "../PageError/PageError.js";
@@ -31,14 +31,14 @@ function Fiche() {
           <FicheName {...fiche} className="equipement" />
         </div>
         <div className="fiche_sections">
-          <Sections
+          <Accordion
             title="Description"
             id="description"
             className="fiche_collapse"
           >
             <p>{fiche.description}</p>
-          </Sections>
-          <Sections
+          </Accordion>
+          <Accordion
             title="Equipements"
             id="equipements"
             className="fiche_collapse"
@@ -48,7 +48,7 @@ function Fiche() {
                 <li>{equipement}</li>
               ))}
             </ul>
-          </Sections>
+          </Accordion>
         </div>
       </main>
       <Footer className="footer_home" logo={logofooter} alt="logo" />

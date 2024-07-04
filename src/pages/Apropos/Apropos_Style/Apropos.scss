@@ -1,10 +1,10 @@
 .main_apropos {
   width: 1023px;
-  margin: 38px auto;
+  margin: 19px auto 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 
   @media screen and (min-width: 375px) and (max-width: 1300px) {
     width: 375px;
@@ -18,32 +18,40 @@
     }
 
     div {
+      width: 1023px;
+
+      @media screen and (min-width: 375px) and (max-width: 1300px) {
+        width: 335px;
+      }
       .button {
-        background-color: #ff6060;
-        display: flex;
-        flex-wrap: wrap;
-        border: none;
         border-radius: 5px;
+        background: var(--Red, #ff6060);
         width: 1023px;
-        cursor: pointer;
+        border: none;
+        display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px 10px 15px;
-        text-decoration: none;
         color: white;
-        position: relative;
-        z-index: 1;
+        padding: 10px 20px 10px 10px;
+        align-items: center;
+
+        &.active + .hidden-box {
+          height: auto;
+          padding: 20px 28px;
+
+          @media screen and (min-width: 375px) and (max-width: 1300px) {
+            padding: 15px;
+          }
+        }
 
         @media screen and (min-width: 375px) and (max-width: 1300px) {
           width: 335px;
+          height: 30px;
+          padding: 10px 6px 10px 10px;
         }
 
         h2 {
           margin: 0;
-          color: #fff;
           font-size: 24px;
-          font-style: normal;
-          font-weight: 700;
 
           @media screen and (min-width: 375px) and (max-width: 1300px) {
             font-size: 13px;
@@ -51,40 +59,32 @@
         }
 
         .rotate_arrow {
+          border: none;
           background-color: transparent;
-          border: 0px;
+          padding: 0;
+
           @media screen and (min-width: 375px) and (max-width: 1300px) {
-            width: 15px;
-            height: 15px;
+            transform: scale(0.6);
           }
         }
       }
-    }
 
-    .collapse {
-      transform: "translateY(0)";
-      transition: "all 0.5s";
-    }
+      .hidden-box {
+        overflow: hidden;
+        height: 0;
+        margin: 0;
+        background-color: #f6f6f673;
+        transition: all 0.5s;
 
-    p {
-      margin: 0;
-      text-align: left;
-      font-size: 18px;
-      border-radius: 10px 10px 5px 5px;
-      font-weight: 400;
-      padding: 0;
-      background: var(--Gray, rgba(246, 246, 246, 0.45));
-      width: 1023px;
-      z-index: 0;
+        p {
+          padding: 0px;
+          font-size: 18px;
+          margin: 0px;
 
-      @media screen and (min-width: 375px) and (max-width: 1300px) {
-        font-size: 13px;
-        padding: 15px 15px 15px 15px;
-      }
-
-      @media screen and (min-width: 375px) and (max-width: 1300px) {
-        font-size: 13px;
-        width: 335px;
+          @media screen and (min-width: 375px) and (max-width: 1300px) {
+            font-size: 12px;
+          }
+        }
       }
     }
   }

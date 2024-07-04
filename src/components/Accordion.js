@@ -1,13 +1,13 @@
 import React from "react";
 import { useState } from "react";
 
-function Sections({ text, title, className, children }) {
+function Accordion({ text, title, className, children }) {
   const [isOpen, setIsClosed] = useState(false);
 
   return !isOpen ? (
     <section>
       <div onClick={() => setIsClosed(true)}>
-        <button className={className}>
+        <button className={`button ${isOpen ? "active" : ""}`}>
           <h2>{title}</h2>
           <button className="rotate_arrow">
             <svg
@@ -28,21 +28,13 @@ function Sections({ text, title, className, children }) {
             </svg>
           </button>
         </button>
+        <div className="hidden-box">{children}</div>
       </div>
-      <p
-        style={{
-          height: isOpen ? "auto" : "0px",
-          position: "relative",
-          transition: "all 0.5s",
-        }}
-      >
-        {text}
-      </p>
     </section>
   ) : (
     <section>
       <div onClick={() => setIsClosed(false)}>
-        <button className={className}>
+        <button className={`button ${isOpen ? "active" : ""}`}>
           <h2>{title}</h2>
           <button className="rotate_arrow">
             <svg
@@ -63,10 +55,10 @@ function Sections({ text, title, className, children }) {
             </svg>
           </button>
         </button>
+        <div className="hidden-box">{children}</div>
       </div>
-      {children}
     </section>
   );
 }
 
-export default Sections;
+export default Accordion;
