@@ -4,6 +4,8 @@ import { useState } from "react";
 function FicheCarroussel({ className, src, alt }) {
   const [index, setIndex] = useState(0);
 
+  const length = src.length;
+
   function handleClick() {
     if (index === src.length - 1) {
       setIndex(0);
@@ -41,6 +43,9 @@ function FicheCarroussel({ className, src, alt }) {
             </svg>
           </button>
           <img src={src[index]} alt={alt} />
+          <span className="image_number">
+            {index + 1}/{length}
+          </span>
           <button onClick={handleClick} className="arrow_right">
             <svg
               width="48"
@@ -66,6 +71,9 @@ function FicheCarroussel({ className, src, alt }) {
       <>
         <section className={className}>
           <img src={src[0]} alt={alt} />
+          <span className="image_number">
+            {index + 1}/{length}
+          </span>
         </section>
       </>
     );

@@ -45,7 +45,7 @@ function Fiche() {
           >
             <ul>
               {fiche.equipments.map((equipement) => (
-                <li>{equipement}</li>
+                <li key={equipement}>{equipement}</li>
               ))}
             </ul>
           </Accordion>

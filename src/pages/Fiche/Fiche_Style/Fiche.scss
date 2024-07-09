@@ -46,6 +46,20 @@ main {
       }
     }
 
+    .image_number {
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 24px;
+      text-shadow: 0px 4px 4px #00000040;
+
+      @media screen and (min-width: 375px) and (max-width: 1300px) {
+        display: none;
+      }
+    }
+
     .arrow_right {
       position: absolute;
       top: 50%;
@@ -244,7 +258,7 @@ main {
       @media screen and (min-width: 375px) and (max-width: 1300px) {
         width: 335px;
       }
-      .button {
+      .accordion {
         border-radius: 5px;
         background: var(--Red, #ff6060);
         width: 582px;
@@ -258,6 +272,7 @@ main {
         &.active + .hidden-box {
           height: auto;
           padding: 20px 28px;
+          font-size: 18px;
 
           @media screen and (min-width: 375px) and (max-width: 1300px) {
             padding: 15px;
@@ -280,12 +295,24 @@ main {
         }
 
         .rotate_arrow {
-          border: none;
-          background-color: transparent;
-          padding: 0;
+          transform: rotate(0deg);
+          transition: all 0.5s;
+          width: auto;
 
           @media screen and (min-width: 375px) and (max-width: 1300px) {
             transform: scale(0.6);
+          }
+        }
+        .rotate {
+          transform: rotate(-180deg);
+          transition: all 0.5s;
+
+          svg {
+            @media screen and (min-width: 375px) and (max-width: 1300px) {
+              transform: rotate(-180deg);
+              transform: scale(0.6);
+              transition: all 0.5s;
+            }
           }
         }
       }

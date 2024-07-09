@@ -8,6 +8,7 @@
 
   @media screen and (min-width: 375px) and (max-width: 1300px) {
     width: 375px;
+    gap: 0;
   }
 
   section {
@@ -23,7 +24,7 @@
       @media screen and (min-width: 375px) and (max-width: 1300px) {
         width: 335px;
       }
-      .button {
+      .accordion {
         border-radius: 5px;
         background: var(--Red, #ff6060);
         width: 1023px;
@@ -59,12 +60,23 @@
         }
 
         .rotate_arrow {
-          border: none;
-          background-color: transparent;
-          padding: 0;
-
+          transform: rotate(0deg);
+          transition: all 0.5s;
+          width: auto;
           @media screen and (min-width: 375px) and (max-width: 1300px) {
             transform: scale(0.6);
+          }
+        }
+        .rotate {
+          transform: rotate(-180deg);
+          transition: all 0.5s;
+
+          svg {
+            @media screen and (min-width: 375px) and (max-width: 1300px) {
+              transform: rotate(-180deg);
+              transform: scale(0.6);
+              transition: all 0.5s;
+            }
           }
         }
       }

@@ -3,7 +3,7 @@ import React from "react";
 function Ratings(props) {
   const stars = new Array(5).fill(null).map((star, index) => {
     return (
-      <li>
+      <li key={index}>
         <svg
           width="14"
           height="14"
