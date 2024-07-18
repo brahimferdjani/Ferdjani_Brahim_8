@@ -4,14 +4,13 @@ import { useState } from "react";
 function Accordion({ text, title, className, children }) {
   const [isOpen, setIsClosed] = useState(false);
 
-  return !isOpen ? (
+  return (
     <section>
       <div onClick={() => setIsClosed(true)}>
-        <div className={`collapse ${isOpen ? "active" : ""}`}>
+        <button className={`button ${isOpen ? "active" : ""}`}>
           <h2>{title}</h2>
-          <div className="rotate_arrow">
+          <button className="rotate_arrow">
             <svg
-              style={{ transform: "rotate(0)", transition: "all 0.5s" }}
               width="33"
               height="32"
               viewBox="0 0 33 32"
@@ -26,17 +25,17 @@ function Accordion({ text, title, className, children }) {
                 />
               </g>
             </svg>
-          </div>
-        </div>
+          </button>
+        </button>
         <div className="hidden-box">{children}</div>
       </div>
     </section>
   ) : (
     <section>
       <div onClick={() => setIsClosed(false)}>
-        <div className={`collapse ${isOpen ? "active" : ""}`}>
+        <button className={`button ${isOpen ? "active" : ""}`}>
           <h2>{title}</h2>
-          <div className="rotate_arrow">
+          <button className="rotate_arrow">
             <svg
               style={{ transform: "rotate(-180deg)", transition: "all 0.5s" }}
               width="33"
@@ -53,8 +52,8 @@ function Accordion({ text, title, className, children }) {
                 />
               </g>
             </svg>
-          </div>
-        </div>
+          </button>
+        </button>
         <div className="hidden-box">{children}</div>
       </div>
     </section>

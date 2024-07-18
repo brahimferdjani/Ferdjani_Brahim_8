@@ -19,40 +19,38 @@ function Fiche() {
 
   return fiche ? (
     <>
-      <div className="container">
-        <Header className="header_home" logo={logo} alt="logo" />
-        <main>
-          <FicheCarroussel
-            className="fiche_carroussel"
-            src={fiche.pictures}
-            alt={fiche.title}
-          />
-          <div className="fiche_info">
-            <FicheTitle {...fiche} className="description" />
-            <FicheName {...fiche} className="equipement" />
-          </div>
-          <div className="fiche_sections">
-            <Accordion
-              title="Description"
-              id="description"
-              className="fiche_collapse"
-            >
-              <p>{fiche.description}</p>
-            </Accordion>
-            <Accordion
-              title="Equipements"
-              id="equipements"
-              className="fiche_collapse"
-            >
-              <ul>
-                {fiche.equipments.map((equipement) => (
-                  <li key={equipement}>{equipement}</li>
-                ))}
-              </ul>
-            </Accordion>
-          </div>
-        </main>
-      </div>
+      <Header className="header_home" logo={logo} alt="logo" />
+      <main>
+        <FicheCarroussel
+          className="fiche_carroussel"
+          src={fiche.pictures}
+          alt={fiche.title}
+        />
+        <div className="fiche_info">
+          <FicheTitle {...fiche} className="description" />
+          <FicheName {...fiche} className="equipement" />
+        </div>
+        <div className="fiche_sections">
+          <Accordion
+            title="Description"
+            id="description"
+            className="fiche_collapse"
+          >
+            <p>{fiche.description}</p>
+          </Accordion>
+          <Accordion
+            title="Equipements"
+            id="equipements"
+            className="fiche_collapse"
+          >
+            <ul>
+              {fiche.equipments.map((equipement) => (
+                <li>{equipement}</li>
+              ))}
+            </ul>
+          </Accordion>
+        </div>
+      </main>
       <Footer className="footer_home" logo={logofooter} alt="logo" />
     </>
   ) : (

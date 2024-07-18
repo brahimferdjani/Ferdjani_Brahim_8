@@ -6,7 +6,6 @@ function Cards(props) {
     <li key={props.id}>
       <Link to={`/fiche/${props.id}`}>
         <img src={props.src} alt={props.alt} />
-        <div className="shade"></div>
         <p>{props.title}</p>
       </Link>
     </li>
