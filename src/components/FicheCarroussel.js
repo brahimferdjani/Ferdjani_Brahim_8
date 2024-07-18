@@ -23,7 +23,7 @@ function FicheCarroussel({ className, src, alt }) {
     return (
       <>
         <section className={className}>
-          <button onClick={handleClickLeft} className="arrow_left">
+          <div onClick={handleClickLeft} className="arrow_left">
             <svg
               width="48"
               height="80"
@@ -39,9 +39,12 @@ function FicheCarroussel({ className, src, alt }) {
                 />
               </g>
             </svg>
-          </button>
+          </div>
           <img src={src[index]} alt={alt} />
-          <button onClick={handleClick} className="arrow_right">
+          <span>
+            {index + 1}/{src.length}
+          </span>
+          <div onClick={handleClick} className="arrow_right">
             <svg
               width="48"
               height="80"
@@ -57,7 +60,7 @@ function FicheCarroussel({ className, src, alt }) {
                 />
               </g>
             </svg>
-          </button>
+          </div>
         </section>
       </>
     );

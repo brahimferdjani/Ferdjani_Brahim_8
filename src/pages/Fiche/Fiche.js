@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../assets/img/LOGO.png";
 import logofooter from "../../assets/img/LOGOFooter.png";
-import "./Fiche_Style/Fiche.scss";
+import "./Fiche.scss";
 import Header from "../../components/Header.js";
 import Footer from "../../components/Footer.js";
 import { annonces } from "../../Annonces.js";
@@ -19,38 +19,40 @@ function Fiche() {
 
   return fiche ? (
     <>
-      <Header className="header_home" logo={logo} alt="logo" />
-      <main>
-        <FicheCarroussel
-          className="fiche_carroussel"
-          src={fiche.pictures}
-          alt={fiche.title}
-        />
-        <div className="fiche_info">
-          <FicheTitle {...fiche} className="description" />
-          <FicheName {...fiche} className="equipement" />
-        </div>
-        <div className="fiche_sections">
-          <Accordion
-            title="Description"
-            id="description"
-            className="fiche_collapse"
-          >
-            <p>{fiche.description}</p>
-          </Accordion>
-          <Accordion
-            title="Equipements"
-            id="equipements"
-            className="fiche_collapse"
-          >
-            <ul>
-              {fiche.equipments.map((equipement) => (
-                <li>{equipement}</li>
-              ))}
-            </ul>
-          </Accordion>
-        </div>
-      </main>
+      <div className="container">
+        <Header className="header_home" logo={logo} alt="logo" />
+        <main>
+          <FicheCarroussel
+            className="fiche_carroussel"
+            src={fiche.pictures}
+            alt={fiche.title}
+          />
+          <div className="fiche_info">
+            <FicheTitle {...fiche} className="description" />
+            <FicheName {...fiche} className="equipement" />
+          </div>
+          <div className="fiche_sections">
+            <Accordion
+              title="Description"
+              id="description"
+              className="fiche_collapse"
+            >
+              <p>{fiche.description}</p>
+            </Accordion>
+            <Accordion
+              title="Equipements"
+              id="equipements"
+              className="fiche_collapse"
+            >
+              <ul>
+                {fiche.equipments.map((equipement) => (
+                  <li key={equipement}>{equipement}</li>
+                ))}
+              </ul>
+            </Accordion>
+          </div>
+        </main>
+      </div>
       <Footer className="footer_home" logo={logofooter} alt="logo" />
     </>
   ) : (

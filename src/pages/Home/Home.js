@@ -23,16 +23,18 @@ function Home() {
 
   return (
     <>
-      <Header className="header_home" logo={logo} alt="logo" />
-      <Banner
-        text="Chez vous, partout et ailleurs"
-        className="banner"
-        src={cover}
-        alt="paysage"
-      />
-      <main className="main_home">
-        <ul>{nombreCarte}</ul>
-      </main>
+      <div className="container">
+        <Header className="header_home" logo={logo} alt="logo" />
+        <Banner
+          text="Chez vous, partout et ailleurs"
+          className="banner"
+          src={cover}
+          alt="paysage"
+        />
+        <main className="main_home">
+          <ul>{nombreCarte}</ul>
+        </main>
+      </div>
       <Footer className="footer_home" logo={logofooter} alt="logo" />
     </>
   );

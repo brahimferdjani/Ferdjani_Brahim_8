@@ -7,9 +7,9 @@ function Accordion({ text, title, className, children }) {
   return !isOpen ? (
     <section>
       <div onClick={() => setIsClosed(true)}>
-        <button className={`button ${isOpen ? "active" : ""}`}>
+        <div className={`collapse ${isOpen ? "active" : ""}`}>
           <h2>{title}</h2>
-          <button className="rotate_arrow">
+          <div className="rotate_arrow">
             <svg
               style={{ transform: "rotate(0)", transition: "all 0.5s" }}
               width="33"
@@ -26,17 +26,17 @@ function Accordion({ text, title, className, children }) {
                 />
               </g>
             </svg>
-          </button>
-        </button>
+          </div>
+        </div>
         <div className="hidden-box">{children}</div>
       </div>
     </section>
   ) : (
     <section>
       <div onClick={() => setIsClosed(false)}>
-        <button className={`button ${isOpen ? "active" : ""}`}>
+        <div className={`collapse ${isOpen ? "active" : ""}`}>
           <h2>{title}</h2>
-          <button className="rotate_arrow">
+          <div className="rotate_arrow">
             <svg
               style={{ transform: "rotate(-180deg)", transition: "all 0.5s" }}
               width="33"
@@ -53,8 +53,8 @@ function Accordion({ text, title, className, children }) {
                 />
               </g>
             </svg>
-          </button>
-        </button>
+          </div>
+        </div>
         <div className="hidden-box">{children}</div>
       </div>
     </section>
