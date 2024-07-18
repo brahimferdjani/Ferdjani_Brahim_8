@@ -43,7 +43,10 @@ function FicheCarroussel({ className, src, alt }) {
             </svg>
           </div>
           <img src={src[index]} alt={alt} />
-          <button onClick={handleClick} className="arrow_right">
+          <span>
+            {index + 1}/{length}
+          </span>
+          <div onClick={handleClick} className="arrow_right">
             <svg
               width="48"
               height="80"
